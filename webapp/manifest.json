@@ -154,6 +154,36 @@
                     "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#DailyFlightCostChart",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#ToBookingAnalysis"
                 }
+            },
+            "CARD_001": {
+                "model": "zui_fe_travel_000099_o4",
+                "template": "sap.ovp.cards.v4.table",
+                "settings": {
+                    "title": "Travel List",
+                    "entitySet": "Travel",
+                    "sortOrder": "ascending",
+                    "sortBy": "BeginDate",
+                    "tabs": [
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#OpenInProgressTravelsLineItem",
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#OpenInProgressTravelsVariant",
+                            "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#OpenInProgressTravelsDataPoint",
+                            "value": "Open/In Progress"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#AcceptedTravelsLineItem",
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#AcceptedTravelsVariant",
+                            "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#AcceptedTravelsDataPoint",
+                            "value": "Accepted"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#RejectedTravelsLineItem",
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#RejectedTravelsVariant",
+                            "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#RejectedTravelsDataPoint",
+                            "value": "Rejected"
+                        }
+                    ]
+                }
             }
         }
     },
