@@ -184,6 +184,16 @@
                         }
                     ]
                 }
+            },
+            "CARD_002": {
+                "model": "mainService",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Spending By Airlines",
+                    "entitySet": "Booking",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#FlightCostByAirlineChart",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#BookingAnalysisIdentification"
+                }
             }
         }
     },

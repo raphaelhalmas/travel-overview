@@ -43,13 +43,35 @@
                         <PropertyValue Property="Title" String="{@i18n>flightPrice}"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="UI.Identification" Qualifier="ToBookingAnalysis">
+                <Annotation Term="UI.Identification" Qualifier="BookingAnalysisIdentification">
                     <Collection>
                         <Record Type="UI.DataFieldForIntentBasedNavigation">
                             <PropertyValue Property="SemanticObject" String="Booking"/>
                             <PropertyValue Property="Action" String="analysis"/>
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="FlightCostByAirlineChart">
+                    <Record>
+                        <PropertyValue Property="Title" String="{@i18n>flightCostByAirlines}"/>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="FlightPrice"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="CarrierName"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>
